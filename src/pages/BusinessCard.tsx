@@ -212,8 +212,8 @@ const BusinessCard = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <Zap size={13} className="text-primary/60" />
-                <p className="text-[15px] font-semibold text-primary">{title}</p>
+                <Zap size={14} className="text-primary" />
+                <p className="text-[16px] font-bold text-primary">{title}</p>
               </motion.div>
               <motion.p
                 className="mb-8 text-center text-[13px] text-muted-foreground/80"
