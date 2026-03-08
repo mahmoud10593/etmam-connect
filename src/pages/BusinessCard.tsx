@@ -223,6 +223,7 @@ const BusinessCard = () => {
               {/* Social Icons with labels */}
               <motion.div
                 className="mb-8 flex gap-4"
+                dir="ltr"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
@@ -258,10 +259,10 @@ const BusinessCard = () => {
               </div>
 
               {/* Contact Details */}
-              <div className="mb-7 w-full space-y-3">
+              <div className="mb-7 w-full space-y-3" dir="ltr">
                 <motion.a
                   href={`tel:${phoneNum}`}
-                  className="contact-row"
+                  className="contact-row !flex-row"
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.55 }}
@@ -271,14 +272,14 @@ const BusinessCard = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
-                    <p className="text-[15px] font-semibold text-foreground" dir="ltr">{phoneNum}</p>
+                    <p className="text-[15px] font-semibold text-foreground">{phoneNum}</p>
                   </div>
                   <div className="h-5 w-5 flex items-center justify-center rounded-full bg-primary/15">
                     <Phone size={10} className="text-primary" />
                   </div>
                 </motion.a>
                 <motion.div
-                  className="contact-row"
+                  className="contact-row !flex-row"
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
@@ -443,8 +444,8 @@ const BusinessCard = () => {
                 <div className="space-y-3">
                   {experience.map((exp: any, i: number) => (
                     <div key={i} className="relative overflow-hidden rounded-2xl border border-border/30 bg-gradient-to-br from-secondary/20 to-secondary/5 p-4">
-                      {/* Accent left bar */}
-                      <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-primary to-primary/30" />
+                      {/* Accent start bar */}
+                      <div className="absolute inset-y-0 start-0 w-[3px] bg-gradient-to-b from-primary to-primary/30" />
                       <div className="flex items-start gap-3.5 ps-3">
                         <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">
                           <Briefcase size={16} className="text-primary" />
@@ -472,8 +473,8 @@ const BusinessCard = () => {
                 <div className="space-y-3">
                   {education.map((edu: any, i: number) => (
                     <div key={i} className="relative overflow-hidden rounded-2xl border border-border/30 bg-gradient-to-br from-secondary/20 to-secondary/5 p-4">
-                      {/* Accent left bar */}
-                      <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-primary to-primary/30" />
+                      {/* Accent start bar */}
+                      <div className="absolute inset-y-0 start-0 w-[3px] bg-gradient-to-b from-primary to-primary/30" />
                       <div className="flex items-start gap-3.5 ps-3">
                         <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">
                           <GraduationCap size={16} className="text-primary" />
