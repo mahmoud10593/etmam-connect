@@ -148,7 +148,7 @@ const BusinessCard = () => {
 
               {/* Name & Info */}
               <motion.h1
-                className="mb-1 text-center text-[22px] font-extrabold leading-tight tracking-tight text-foreground"
+                className="mb-1.5 text-center text-[24px] font-extrabold leading-tight tracking-tight text-foreground"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
