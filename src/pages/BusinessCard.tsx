@@ -131,7 +131,7 @@ const BusinessCard = () => {
               </button>
             </div>
 
-            <div className="flex flex-col items-center px-7 pb-7 pt-2">
+            <div className="flex flex-col items-center px-8 pb-8 pt-4">
               {/* Avatar */}
               <motion.div
                 className="relative mb-5"
