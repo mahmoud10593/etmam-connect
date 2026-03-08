@@ -271,7 +271,7 @@ const BusinessCard = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
-                <p className="mb-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/50">
+                <p className="mb-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
                   {t("scan_linkedin")}
                 </p>
                 <div className="rounded-xl border border-border/25 bg-secondary/10 p-3.5">
