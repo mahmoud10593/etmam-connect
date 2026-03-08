@@ -243,8 +243,8 @@ const BusinessCard = () => {
                     <Mail size={15} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1 text-start">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground/70">{t("email")}</p>
-                    <p className="text-[14px] font-semibold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{emailAddr}</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("email")}</p>
+                    <p className="text-[14px] font-bold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{emailAddr}</p>
                   </div>
                 </motion.a>
 
