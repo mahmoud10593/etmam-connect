@@ -168,7 +168,7 @@ const BusinessCard = () => {
                 <div className="h-px w-5 bg-gradient-to-l from-transparent to-primary/40" />
               </motion.div>
               <motion.p
-                className="mb-6 text-center text-[12px] font-semibold text-muted-foreground"
+                className="mb-8 text-center text-[13px] font-semibold text-muted-foreground"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.55, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
