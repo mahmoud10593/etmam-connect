@@ -141,7 +141,7 @@ const BusinessCard = () => {
               >
                 <div className="absolute -inset-[6px] rounded-full bg-gradient-to-br from-primary/30 via-primary/10 to-transparent" />
                 <div className="absolute -inset-[6px] rounded-full border border-primary/20" />
-                <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-background">
+                <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-background">
                   <img src={d.avatar_url || profilePhoto} alt={name} className="h-full w-full object-cover" />
                 </div>
               </motion.div>
