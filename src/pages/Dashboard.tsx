@@ -71,6 +71,47 @@ const Dashboard = () => {
     handleChange("skills", skills);
   };
 
+  const handleAvatarUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !user) return;
+    
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!allowedTypes.includes(file.type)) {
+      toast.error(lang === "ar" ? "يرجى رفع صورة (JPG, PNG, WEBP)" : "Please upload an image (JPG, PNG, WEBP)");
+      return;
+    }
+    
+    setUploading(true);
+    try {
+      const ext = file.name.split('.').pop();
+      const filePath = `${user.id}/avatar.${ext}`;
+      
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(filePath, file, { upsert: true });
+      
+      if (uploadError) throw uploadError;
+      
+      const { data: { publicUrl } } = supabase.storage
+        .from('avatars')
+        .getPublicUrl(filePath);
+      
+      // Add cache buster
+      const avatarUrl = `${publicUrl}?t=${Date.now()}`;
+      handleChange("avatar_url", avatarUrl);
+      
+      // Auto-save
+      if (form.id) {
+        await updateCard.mutateAsync({ ...form, avatar_url: avatarUrl, id: form.id } as any);
+        toast.success(lang === "ar" ? "تم رفع الصورة بنجاح" : "Photo uploaded successfully");
+      }
+    } catch (err: any) {
+      toast.error(err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
   const tabs = [
     { id: "basic", label: t("basic_info"), icon: User },
     { id: "contact", label: t("contact_info"), icon: Phone },
