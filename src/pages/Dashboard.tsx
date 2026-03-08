@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   LogOut, Save, Eye, User, Phone, Globe, Award, Briefcase, GraduationCap,
-  Plus, X, Loader2, Check, Languages,
+  Plus, X, Loader2, Check, Languages, Camera, Upload,
 } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCardData, useUpdateCardData } from "@/hooks/useCardData";
+import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const Dashboard = () => {
