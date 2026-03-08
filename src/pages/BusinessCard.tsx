@@ -258,10 +258,10 @@ const BusinessCard = () => {
               </div>
 
               {/* Contact Details */}
-              <div className="mb-7 w-full space-y-3">
+              <div className="mb-7 w-full space-y-3" dir="ltr">
                 <motion.a
                   href={`tel:${phoneNum}`}
-                  className="contact-row"
+                  className="contact-row !flex-row"
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.55 }}
@@ -271,14 +271,14 @@ const BusinessCard = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
-                    <p className="text-[15px] font-semibold text-foreground" dir="ltr">{phoneNum}</p>
+                    <p className="text-[15px] font-semibold text-foreground">{phoneNum}</p>
                   </div>
                   <div className="h-5 w-5 flex items-center justify-center rounded-full bg-primary/15">
                     <Phone size={10} className="text-primary" />
                   </div>
                 </motion.a>
                 <motion.div
-                  className="contact-row"
+                  className="contact-row !flex-row"
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
