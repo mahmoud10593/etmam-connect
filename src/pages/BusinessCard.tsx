@@ -218,7 +218,7 @@ const BusinessCard = () => {
               <div className="mb-7 w-full space-y-3">
                 <motion.a
                   href={`tel:${phoneNum}`}
-                  className="flex items-center gap-3.5 rounded-xl border border-border/30 bg-secondary/15 px-4 py-3 transition-all hover:border-primary/25 hover:bg-secondary/25"
+                  className="flex items-center gap-4 rounded-2xl border border-border/30 bg-secondary/15 px-5 py-4 transition-all hover:border-primary/25 hover:bg-secondary/25"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.65, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
