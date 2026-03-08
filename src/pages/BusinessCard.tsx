@@ -431,16 +431,3 @@ const BusinessCard = () => {
 };
 
 export default BusinessCard;
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-export default BusinessCard;
