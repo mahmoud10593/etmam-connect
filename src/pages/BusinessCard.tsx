@@ -274,8 +274,8 @@ const BusinessCard = () => {
                     <Phone size={17} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground/60">{t("call")}</p>
-                    <p className="text-[14px] font-medium text-foreground" dir="ltr">{phoneNum}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
+                    <p className="text-[15px] font-semibold text-foreground" dir="ltr">{phoneNum}</p>
                   </div>
                   <div className="h-5 w-5 flex items-center justify-center rounded-full bg-primary/10">
                     <Phone size={10} className="text-primary/60" />
