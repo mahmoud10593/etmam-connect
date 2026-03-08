@@ -274,8 +274,8 @@ const BusinessCard = () => {
                 <p className="mb-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
                   {t("scan_linkedin")}
                 </p>
-                <div className="rounded-xl border border-border/25 bg-secondary/10 p-3.5">
-                  <QRCodeSVG value={linkedinUrl} size={90} bgColor="transparent" fgColor="hsl(210, 100%, 55%)" />
+                <div className="rounded-2xl border border-border/25 bg-secondary/10 p-4">
+                  <QRCodeSVG value={linkedinUrl} size={100} bgColor="transparent" fgColor="hsl(210, 100%, 55%)" />
                 </div>
               </motion.div>
 
