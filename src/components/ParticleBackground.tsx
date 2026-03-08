@@ -12,30 +12,30 @@ const particleOptions: ISourceOptions = {
       onHover: { enable: true, mode: "grab" },
     },
     modes: {
-      grab: { distance: 180, links: { opacity: 0.4 } },
+      grab: { distance: 200, links: { opacity: 0.5 } },
     },
   },
   particles: {
-    color: { value: ["#3B82F6", "#60A5FA", "#2563EB"] },
+    color: { value: ["#3B82F6", "#60A5FA", "#2563EB", "#1D4ED8"] },
     links: {
       color: "#3B82F6",
-      distance: 160,
+      distance: 180,
       enable: true,
-      opacity: 0.15,
-      width: 1,
+      opacity: 0.25,
+      width: 1.2,
     },
     move: {
       enable: true,
-      speed: 0.5,
+      speed: 0.6,
       direction: "none",
       outModes: { default: "out" },
     },
     number: {
       density: { enable: true },
-      value: 80,
+      value: 120,
     },
     opacity: {
-      value: { min: 0.15, max: 0.5 },
+      value: { min: 0.25, max: 0.7 },
       animation: {
         enable: true,
         speed: 0.8,
@@ -44,7 +44,7 @@ const particleOptions: ISourceOptions = {
     },
     shape: { type: "circle" },
     size: {
-      value: { min: 1, max: 3 },
+      value: { min: 1.5, max: 4 },
       animation: {
         enable: true,
         speed: 1.5,
@@ -77,10 +77,10 @@ const ParticleBackground = () => {
       
       {/* Subtle grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(hsl(217 91% 60% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(217 91% 60% / 0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+          backgroundImage: `linear-gradient(hsl(210 100% 55% / 0.4) 1px, transparent 1px), linear-gradient(90deg, hsl(210 100% 55% / 0.4) 1px, transparent 1px)`,
+          backgroundSize: "50px 50px",
         }}
       />
       
