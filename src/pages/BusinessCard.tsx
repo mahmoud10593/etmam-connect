@@ -134,7 +134,7 @@ const BusinessCard = () => {
             <div className="flex flex-col items-center px-8 pb-8 pt-4">
               {/* Avatar */}
               <motion.div
-                className="relative mb-5"
+                className="relative mb-7"
                 initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ delay: 0.3, type: "spring", stiffness: 180, damping: 18 }}
