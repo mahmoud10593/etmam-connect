@@ -133,14 +133,10 @@ const BusinessCard = () => {
             <div className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-primary/[0.04] blur-2xl" />
 
             {/* Header */}
-            <div className="flex items-center justify-between p-5 pb-0">
+            <div className="flex items-center justify-end p-5 pb-0">
               <button onClick={() => setFlipped(true)} className="icon-btn">
                 <RotateCw size={16} className="text-foreground/80" />
               </button>
-              <div className="flex items-center gap-1.5 rounded-full border border-border/50 bg-secondary/30 px-3 py-1">
-                <Sparkles size={10} className="text-primary" />
-                <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-muted-foreground">Digital Card</span>
-              </div>
             </div>
 
             <div className="flex flex-col items-center px-8 pb-8 pt-5">
