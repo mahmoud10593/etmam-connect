@@ -5,7 +5,7 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import {
   RotateCw, Globe, Linkedin, MessageCircle, Mail, Phone, MapPin,
   UserPlus, Share2, Settings, Heart, Award, Briefcase, GraduationCap,
-  Languages, Loader2, Sparkles, Zap,
+  Languages, Loader2, Zap,
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { useLanguage } from "@/contexts/LanguageContext";
