@@ -444,8 +444,8 @@ const BusinessCard = () => {
                 <div className="space-y-3">
                   {experience.map((exp: any, i: number) => (
                     <div key={i} className="relative overflow-hidden rounded-2xl border border-border/30 bg-gradient-to-br from-secondary/20 to-secondary/5 p-4">
-                      {/* Accent left bar */}
-                      <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-primary to-primary/30" />
+                      {/* Accent start bar */}
+                      <div className="absolute inset-y-0 start-0 w-[3px] bg-gradient-to-b from-primary to-primary/30" />
                       <div className="flex items-start gap-3.5 ps-3">
                         <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 border border-primary/20">
                           <Briefcase size={16} className="text-primary" />
