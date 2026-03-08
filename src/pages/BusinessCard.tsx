@@ -208,7 +208,7 @@ const BusinessCard = () => {
               </motion.div>
 
               {/* Divider */}
-              <div className="mb-5 flex w-full items-center gap-4">
+              <div className="mb-7 flex w-full items-center gap-4">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/40" />
                 <div className="h-1 w-1 rounded-full bg-primary/25" />
                 <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/40" />
