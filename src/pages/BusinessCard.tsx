@@ -216,7 +216,7 @@ const BusinessCard = () => {
                 <p className="text-[16px] font-bold text-primary">{title}</p>
               </motion.div>
               <motion.p
-                className="mb-8 text-center text-[13px] text-muted-foreground/80"
+                className="mb-8 text-center text-[14px] font-medium text-muted-foreground"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.45 }}
