@@ -46,7 +46,7 @@ const particleOptions: ISourceOptions = {
     },
     shape: { type: "circle" },
     size: {
-      value: { min: 1.5, max: 3.5 },
+      value: { min: 2, max: 5 },
       animation: {
         enable: true,
         speed: 1,
