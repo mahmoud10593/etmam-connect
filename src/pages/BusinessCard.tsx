@@ -199,7 +199,7 @@ const BusinessCard = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.93 }}
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/40 bg-secondary/20 transition-all duration-200 group-hover:border-primary/40 group-hover:bg-primary/10 group-hover:shadow-lg group-hover:shadow-primary/5">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/40 bg-secondary/20 transition-all duration-200 group-hover:border-primary/40 group-hover:bg-primary/10 group-hover:shadow-lg group-hover:shadow-primary/5">
                       <Icon size={18} className="text-foreground transition-colors group-hover:text-primary" />
                     </div>
                     <span className="text-[9px] font-bold text-muted-foreground transition-colors group-hover:text-primary/80">{label}</span>
