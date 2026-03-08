@@ -200,9 +200,9 @@ const BusinessCard = () => {
                     whileTap={{ scale: 0.93 }}
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/40 bg-secondary/20 transition-all duration-200 group-hover:border-primary/40 group-hover:bg-primary/10 group-hover:shadow-lg group-hover:shadow-primary/5">
-                      <Icon size={18} className="text-foreground/70 transition-colors group-hover:text-primary" />
+                      <Icon size={18} className="text-foreground transition-colors group-hover:text-primary" />
                     </div>
-                    <span className="text-[9px] font-semibold text-muted-foreground/60 transition-colors group-hover:text-primary/80">{label}</span>
+                    <span className="text-[9px] font-bold text-muted-foreground transition-colors group-hover:text-primary/80">{label}</span>
                   </motion.a>
                 ))}
               </motion.div>
