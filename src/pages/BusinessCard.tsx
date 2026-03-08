@@ -127,8 +127,8 @@ const BusinessCard = () => {
                 <div className="h-px w-10 bg-gradient-to-l from-transparent to-primary/30" />
               </div>
               <div className="absolute right-5 top-1/2 -translate-y-1/2">
-                <button onClick={() => setFlipped(true)} className="icon-btn !p-2">
-                  <RotateCw size={14} className="text-foreground/60" />
+                <button onClick={() => setFlipped(true)} className="flex h-9 w-9 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 transition-all hover:bg-primary/20 hover:border-primary/50 hover:shadow-md hover:shadow-primary/10">
+                  <RotateCw size={15} className="text-primary" />
                 </button>
               </div>
             </div>
