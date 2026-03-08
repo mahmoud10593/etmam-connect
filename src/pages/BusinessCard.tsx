@@ -337,19 +337,24 @@ const BusinessCard = () => {
             <div className="px-7 pb-8 pt-5">
               {/* Mini header */}
               <motion.div
-                className="mb-6 flex items-center gap-3.5 rounded-2xl border border-border/20 bg-secondary/10 p-3"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: flipped ? 1 : 0 }}
-                transition={{ delay: 0.2 }}
+                className="mb-7 flex flex-col items-center text-center"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: flipped ? 1 : 0, y: flipped ? 0 : -10 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
               >
-                <div className="glow-border h-12 w-12 overflow-hidden rounded-xl !border-[1.5px]">
+                <div className="mb-3 h-16 w-16 overflow-hidden rounded-full border-2 border-primary/30 shadow-lg shadow-primary/10">
                   <img src={d.avatar_url || profilePhoto} alt={name} className="h-full w-full object-cover" />
                 </div>
-                <div className="flex-1">
-                  <p className="text-[14px] font-bold text-foreground">{name}</p>
-                  <p className="text-[12px] font-medium text-primary">{title}</p>
-                </div>
+                <p className="text-[16px] font-extrabold text-foreground">{name}</p>
+                <p className="text-[13px] font-bold text-primary">{title}</p>
               </motion.div>
+
+              {/* Divider */}
+              <div className="mb-5 flex w-full items-center gap-3">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/30" />
+                <div className="h-1.5 w-1.5 rounded-full bg-primary/30" />
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/30" />
+              </div>
 
               {/* About */}
               <motion.div
