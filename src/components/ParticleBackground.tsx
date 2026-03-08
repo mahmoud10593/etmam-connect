@@ -12,31 +12,45 @@ const particleOptions: ISourceOptions = {
       onHover: { enable: true, mode: "grab" },
     },
     modes: {
-      grab: { distance: 140, links: { opacity: 0.3 } },
+      grab: { distance: 180, links: { opacity: 0.4 } },
     },
   },
   particles: {
-    color: { value: "#3B82F6" },
+    color: { value: ["#3B82F6", "#60A5FA", "#2563EB"] },
     links: {
       color: "#3B82F6",
-      distance: 150,
+      distance: 160,
       enable: true,
-      opacity: 0.12,
+      opacity: 0.15,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 0.6,
+      speed: 0.5,
       direction: "none",
       outModes: { default: "out" },
     },
     number: {
       density: { enable: true },
-      value: 60,
+      value: 80,
     },
-    opacity: { value: 0.35 },
+    opacity: {
+      value: { min: 0.15, max: 0.5 },
+      animation: {
+        enable: true,
+        speed: 0.8,
+        startValue: "random",
+      },
+    },
     shape: { type: "circle" },
-    size: { value: { min: 1, max: 2.5 } },
+    size: {
+      value: { min: 1, max: 3 },
+      animation: {
+        enable: true,
+        speed: 1.5,
+        startValue: "random",
+      },
+    },
   },
   detectRetina: true,
 };
@@ -56,6 +70,20 @@ const ParticleBackground = () => {
 
   return (
     <div className="fixed inset-0 z-0">
+      {/* Ambient gradient orbs for depth */}
+      <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-primary/5 blur-[120px]" />
+      <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/8 blur-[120px]" />
+      <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/3 blur-[100px]" />
+      
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(217 91% 60% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(217 91% 60% / 0.3) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
+      
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
