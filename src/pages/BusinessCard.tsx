@@ -249,7 +249,7 @@ const BusinessCard = () => {
                 </motion.a>
 
                 <motion.div
-                  className="flex items-center gap-3.5 rounded-xl border border-border/30 bg-secondary/15 px-4 py-3"
+                  className="flex items-center gap-4 rounded-2xl border border-border/30 bg-secondary/15 px-5 py-4"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.75, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
