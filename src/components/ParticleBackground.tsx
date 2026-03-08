@@ -39,7 +39,7 @@ const particleOptions: ISourceOptions = {
       animation: {
         enable: true,
         speed: 0.8,
-        minimumValue: 0.1,
+        startValue: "random",
       },
     },
     shape: { type: "circle" },
@@ -48,7 +48,7 @@ const particleOptions: ISourceOptions = {
       animation: {
         enable: true,
         speed: 1.5,
-        minimumValue: 0.5,
+        startValue: "random",
       },
     },
   },
