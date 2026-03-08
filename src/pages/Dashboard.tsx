@@ -189,6 +189,49 @@ const Dashboard = () => {
           >
             {activeTab === "basic" && (
               <div className="grid gap-5 md:grid-cols-2">
+                {/* Avatar Upload */}
+                <div className="md:col-span-2 flex flex-col items-center gap-3 mb-2">
+                  <label className={labelClass}>{lang === "ar" ? "الصورة الشخصية" : "Profile Photo"}</label>
+                  <div className="relative group">
+                    <div className="h-24 w-24 rounded-full overflow-hidden border-2 border-border bg-secondary/30">
+                      {form.avatar_url ? (
+                        <img src={form.avatar_url} alt="Avatar" className="h-full w-full object-cover" />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center">
+                          <User size={32} className="text-muted-foreground" />
+                        </div>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      disabled={uploading}
+                      className="absolute inset-0 flex items-center justify-center rounded-full bg-background/60 opacity-0 transition-opacity group-hover:opacity-100"
+                    >
+                      {uploading ? (
+                        <Loader2 size={20} className="animate-spin text-primary" />
+                      ) : (
+                        <Camera size={20} className="text-primary" />
+                      )}
+                    </button>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/jpeg,image/png,image/webp"
+                      onChange={handleAvatarUpload}
+                      className="hidden"
+                    />
+                  </div>
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploading}
+                    className="flex items-center gap-1.5 text-xs font-medium text-primary hover:underline"
+                  >
+                    <Upload size={12} />
+                    {uploading
+                      ? (lang === "ar" ? "جاري الرفع..." : "Uploading...")
+                      : (lang === "ar" ? "رفع صورة" : "Upload Photo")}
+                  </button>
+                </div>
                 <div>
                   <label className={labelClass}>{t("name")} ({t("english")})</label>
                   <input className={inputClass} value={form.name_en || ""} onChange={(e) => handleChange("name_en", e.target.value)} />
