@@ -183,13 +183,13 @@ const BusinessCard = () => {
                 transition={{ delay: 0.25, type: "spring", stiffness: 150, damping: 20 }}
               >
                 {/* Outer decorative ring */}
-                <div className="absolute -inset-2 rounded-full border border-dashed border-primary/15 animate-[spin_30s_linear_infinite]" />
+                <div className="absolute -inset-2 rounded-full border border-dashed border-primary/25 animate-[spin_30s_linear_infinite]" />
                 {/* Small dots on the ring */}
                 <div className="absolute -inset-2 rounded-full">
-                  <div className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-primary/40" />
-                  <div className="absolute bottom-0 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-primary/40" />
-                  <div className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary/40" />
-                  <div className="absolute right-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary/40" />
+                  <div className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-primary/60" />
+                  <div className="absolute bottom-0 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-primary/60" />
+                  <div className="absolute left-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary/60" />
+                  <div className="absolute right-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-primary/60" />
                 </div>
                 <div className="glow-border h-[120px] w-[120px] overflow-hidden rounded-full">
                   <img src={d.avatar_url || profilePhoto} alt={name} className="h-full w-full object-cover" />
