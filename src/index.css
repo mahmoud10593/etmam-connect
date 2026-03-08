@@ -4,53 +4,53 @@
 
 @layer base {
   :root {
-    --background: 222 47% 5%;
-    --foreground: 210 40% 96%;
+    --background: 220 30% 7%;
+    --foreground: 0 0% 95%;
 
-    --card: 222 30% 10%;
-    --card-foreground: 210 40% 96%;
+    --card: 220 25% 11%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222 30% 10%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 220 25% 11%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 217 91% 60%;
+    --primary: 210 100% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 30% 15%;
-    --secondary-foreground: 210 40% 96%;
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 0 0% 93%;
 
-    --muted: 217 20% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 215 20% 16%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217 91% 60%;
+    --accent: 210 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 25% 18%;
-    --input: 217 30% 15%;
-    --ring: 217 91% 60%;
+    --border: 215 20% 22%;
+    --input: 215 25% 16%;
+    --ring: 210 100% 55%;
 
     --radius: 0.75rem;
 
     /* Glassmorphism tokens */
-    --glass-bg: 220 40% 10%;
-    --glass-border: 217 50% 30%;
-    --glass-glow: 217 91% 60%;
+    --glass-bg: 220 30% 12%;
+    --glass-border: 210 40% 35%;
+    --glass-glow: 210 100% 55%;
     --glass-blur: 24px;
 
-    --sidebar-background: 222 47% 5%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 222 47% 7%;
-    --sidebar-accent: 217 30% 18%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 217 30% 22%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 220 30% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 100% 55%;
+    --sidebar-primary-foreground: 220 30% 7%;
+    --sidebar-accent: 215 25% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 215 25% 24%;
+    --sidebar-ring: 210 100% 55%;
 
-    --font-en: 'Space Grotesk', 'Outfit', system-ui, sans-serif;
-    --font-ar: 'IBM Plex Sans Arabic', 'Segoe UI', sans-serif;
+    --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-ar: 'Cairo', 'Segoe UI', sans-serif;
   }
 }
 
