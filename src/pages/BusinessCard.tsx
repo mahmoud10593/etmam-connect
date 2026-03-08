@@ -87,11 +87,11 @@ const BusinessCard = () => {
         className="fixed left-4 right-4 top-4 z-20 flex items-center justify-between"
       >
         <Link to="/login" className="icon-btn">
-          <Settings size={18} className="text-muted-foreground" />
+          <Settings size={18} className="text-foreground/80" />
         </Link>
         <button onClick={() => setLang(lang === "en" ? "ar" : "en")} className="icon-btn gap-1.5 !px-3">
-          <Languages size={16} className="text-muted-foreground" />
-          <span className="text-xs font-medium text-muted-foreground">{lang === "en" ? "عربي" : "EN"}</span>
+          <Languages size={16} className="text-foreground/80" />
+          <span className="text-xs font-semibold text-foreground/80">{lang === "en" ? "عربي" : "EN"}</span>
         </button>
       </motion.div>
 
