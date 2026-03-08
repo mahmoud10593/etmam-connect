@@ -9,46 +9,46 @@ const particleOptions: ISourceOptions = {
   fpsLimit: 60,
   interactivity: {
     events: {
-      onHover: { enable: true, mode: "grab" },
+      onHover: { enable: true, mode: "bubble" },
     },
     modes: {
-      grab: { distance: 200, links: { opacity: 0.5 } },
+      bubble: { distance: 200, size: 12, duration: 2, opacity: 0.6 },
     },
   },
   particles: {
-    color: { value: ["#3B82F6", "#60A5FA", "#2563EB", "#1D4ED8"] },
+    color: { value: ["#3B82F6", "#60A5FA", "#93C5FD", "#2563EB"] },
     links: {
-      color: "#3B82F6",
-      distance: 180,
-      enable: true,
-      opacity: 0.25,
-      width: 1.2,
+      enable: false,
     },
     move: {
       enable: true,
-      speed: 0.6,
+      speed: 0.4,
       direction: "none",
       outModes: { default: "out" },
+      random: true,
+      straight: false,
     },
     number: {
       density: { enable: true },
-      value: 120,
+      value: 40,
     },
     opacity: {
-      value: { min: 0.25, max: 0.7 },
+      value: { min: 0.1, max: 0.4 },
       animation: {
         enable: true,
-        speed: 0.8,
+        speed: 0.5,
         startValue: "random",
+        sync: false,
       },
     },
     shape: { type: "circle" },
     size: {
-      value: { min: 1.5, max: 4 },
+      value: { min: 4, max: 20 },
       animation: {
         enable: true,
         speed: 1.5,
         startValue: "random",
+        sync: false,
       },
     },
   },
@@ -74,15 +74,6 @@ const ParticleBackground = () => {
       <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-primary/5 blur-[120px]" />
       <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/8 blur-[120px]" />
       <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/3 blur-[100px]" />
-      
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `linear-gradient(hsl(210 100% 55% / 0.4) 1px, transparent 1px), linear-gradient(90deg, hsl(210 100% 55% / 0.4) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      />
       
       <Particles
         id="tsparticles"
