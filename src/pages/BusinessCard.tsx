@@ -149,17 +149,17 @@ const BusinessCard = () => {
               {/* Name & Info */}
               <motion.h1
                 className="mb-1 text-center text-[22px] font-extrabold leading-tight tracking-tight text-foreground"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 {name}
               </motion.h1>
               <motion.div
                 className="mb-1.5 flex items-center justify-center gap-2"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: 0.5, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="h-px w-5 bg-gradient-to-r from-transparent to-primary/40" />
                 <p className="text-center text-[14px] font-bold text-primary">
@@ -168,10 +168,10 @@ const BusinessCard = () => {
                 <div className="h-px w-5 bg-gradient-to-l from-transparent to-primary/40" />
               </motion.div>
               <motion.p
-                className="mb-6 text-center text-[12px] font-medium text-muted-foreground/80"
-                initial={{ opacity: 0, y: 10 }}
+                className="mb-6 text-center text-[12px] font-semibold text-muted-foreground"
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.55, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 {company}
               </motion.p>
