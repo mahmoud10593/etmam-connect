@@ -229,7 +229,7 @@ const BusinessCard = () => {
               >
                 {[
                   { icon: Globe, href: websiteUrl, label: lang === "ar" ? "الموقع" : "Web" },
-                  { icon: Linkedin, href: linkedinUrl, label: "LinkedIn" },
+                  { icon: Linkedin, href: linkedinUrl, label: lang === "ar" ? "لينكدإن" : "LinkedIn" },
                   { icon: MessageCircle, href: d.whatsapp_url || "#", label: lang === "ar" ? "واتساب" : "Chat" },
                   { icon: Mail, href: `mailto:${emailAddr}`, label: lang === "ar" ? "بريد" : "Email" },
                 ].map(({ icon: Icon, href, label }, i) => (
@@ -269,9 +269,9 @@ const BusinessCard = () => {
                   <div className="section-icon shrink-0 !h-11 !w-11 !rounded-full">
                     <Phone size={17} className="text-primary" />
                   </div>
-                  <div className="min-w-0 flex-1">
+                  <div className="min-w-0 flex-1 text-start">
                     <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
-                    <p className="text-[15px] font-semibold text-foreground" dir="ltr">{phoneNum}</p>
+                    <p className="text-[15px] font-semibold text-foreground">{phoneNum}</p>
                   </div>
                 </motion.a>
                 <motion.div
@@ -283,7 +283,7 @@ const BusinessCard = () => {
                   <div className="section-icon shrink-0 !h-11 !w-11 !rounded-full">
                     <MapPin size={17} className="text-primary" />
                   </div>
-                  <div className="min-w-0 flex-1">
+                  <div className="min-w-0 flex-1 text-start">
                     <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("location")}</p>
                     <p className="text-[15px] font-semibold text-foreground">{locationText}</p>
                   </div>
