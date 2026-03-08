@@ -20,7 +20,7 @@
     --secondary-foreground: 0 0% 93%;
 
     --muted: 215 20% 16%;
-    --muted-foreground: 215 15% 65%;
+    --muted-foreground: 215 15% 75%;
 
     --accent: 210 100% 55%;
     --accent-foreground: 0 0% 100%;
@@ -50,7 +50,7 @@
     --sidebar-ring: 210 100% 55%;
 
     --font-en: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-ar: 'Cairo', 'Segoe UI', sans-serif;
+    --font-ar: 'Cairo', 'Tajawal', 'Segoe UI', sans-serif;
   }
 }
 

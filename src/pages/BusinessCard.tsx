@@ -107,15 +107,15 @@ const BusinessCard = () => {
           className="relative"
           style={{ transformStyle: "preserve-3d", rotateX: flipped ? 0 : rotateX, rotateY: flipped ? 180 : rotateY2 }}
           animate={{ rotateY: flipped ? 180 : 0 }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.7, ease: [0.68, -0.15, 0.27, 1.15] }}
         >
           {/* ===== FRONT ===== */}
           <motion.div
             className="glass-card w-full overflow-hidden"
             style={{ backfaceVisibility: "hidden" }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Top accent bar */}
             <div className="h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
@@ -135,9 +135,9 @@ const BusinessCard = () => {
               {/* Avatar */}
               <motion.div
                 className="relative mb-5"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 25 }}
+                initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ delay: 0.3, type: "spring", stiffness: 180, damping: 18 }}
               >
                 <div className="absolute -inset-[6px] rounded-full bg-gradient-to-br from-primary/30 via-primary/10 to-transparent" />
                 <div className="absolute -inset-[6px] rounded-full border border-primary/20" />
@@ -149,17 +149,17 @@ const BusinessCard = () => {
               {/* Name & Info */}
               <motion.h1
                 className="mb-1 text-center text-[22px] font-extrabold leading-tight tracking-tight text-foreground"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 {name}
               </motion.h1>
               <motion.div
                 className="mb-1.5 flex items-center justify-center gap-2"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: 0.5, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="h-px w-5 bg-gradient-to-r from-transparent to-primary/40" />
                 <p className="text-center text-[14px] font-bold text-primary">
@@ -168,10 +168,10 @@ const BusinessCard = () => {
                 <div className="h-px w-5 bg-gradient-to-l from-transparent to-primary/40" />
               </motion.div>
               <motion.p
-                className="mb-6 text-center text-[12px] font-medium text-muted-foreground/80"
-                initial={{ opacity: 0, y: 10 }}
+                className="mb-6 text-center text-[12px] font-semibold text-muted-foreground"
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.55, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 {company}
               </motion.p>
@@ -179,9 +179,9 @@ const BusinessCard = () => {
               {/* Quick Actions - with labels */}
               <motion.div
                 className="mb-5 flex w-full items-center justify-center gap-4"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: 0.6, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 {[
                   { icon: Globe, href: websiteUrl, label: lang === "ar" ? "الموقع" : "Web" },
@@ -200,9 +200,9 @@ const BusinessCard = () => {
                     whileTap={{ scale: 0.93 }}
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/40 bg-secondary/20 transition-all duration-200 group-hover:border-primary/40 group-hover:bg-primary/10 group-hover:shadow-lg group-hover:shadow-primary/5">
-                      <Icon size={18} className="text-foreground/70 transition-colors group-hover:text-primary" />
+                      <Icon size={18} className="text-foreground transition-colors group-hover:text-primary" />
                     </div>
-                    <span className="text-[9px] font-semibold text-muted-foreground/60 transition-colors group-hover:text-primary/80">{label}</span>
+                    <span className="text-[9px] font-bold text-muted-foreground transition-colors group-hover:text-primary/80">{label}</span>
                   </motion.a>
                 ))}
               </motion.div>
@@ -219,47 +219,47 @@ const BusinessCard = () => {
                 <motion.a
                   href={`tel:${phoneNum}`}
                   className="flex items-center gap-3.5 rounded-xl border border-border/30 bg-secondary/15 px-4 py-3 transition-all hover:border-primary/25 hover:bg-secondary/25"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.65, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Phone size={15} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1 text-start">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground/70">{t("call")}</p>
-                    <p className="text-[14px] font-semibold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{phoneNum}</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
+                    <p className="text-[14px] font-bold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{phoneNum}</p>
                   </div>
                 </motion.a>
 
                 <motion.a
                   href={`mailto:${emailAddr}`}
                   className="flex items-center gap-3.5 rounded-xl border border-border/30 bg-secondary/15 px-4 py-3 transition-all hover:border-primary/25 hover:bg-secondary/25"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.55 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.7, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <Mail size={15} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1 text-start">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground/70">{t("email")}</p>
-                    <p className="text-[14px] font-semibold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{emailAddr}</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("email")}</p>
+                    <p className="text-[14px] font-bold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{emailAddr}</p>
                   </div>
                 </motion.a>
 
                 <motion.div
                   className="flex items-center gap-3.5 rounded-xl border border-border/30 bg-secondary/15 px-4 py-3"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.75, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                     <MapPin size={15} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1 text-start">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground/70">{t("location")}</p>
-                    <p className="text-[14px] font-semibold text-foreground">{locationText}</p>
+                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("location")}</p>
+                    <p className="text-[14px] font-bold text-foreground">{locationText}</p>
                   </div>
                 </motion.div>
               </div>
@@ -267,11 +267,11 @@ const BusinessCard = () => {
               {/* QR Code - compact */}
               <motion.div
                 className="mb-5 flex flex-col items-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.65 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.8, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
-                <p className="mb-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/50">
+                <p className="mb-2.5 text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground/70">
                   {t("scan_linkedin")}
                 </p>
                 <div className="rounded-xl border border-border/25 bg-secondary/10 p-3.5">
@@ -282,9 +282,9 @@ const BusinessCard = () => {
               {/* Actions */}
               <motion.div
                 className="flex w-full items-center gap-2.5"
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
+                transition={{ delay: 0.85, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 <motion.button
                   onClick={handleSaveContact}
@@ -357,7 +357,7 @@ const BusinessCard = () => {
                   <div className="section-icon"><Heart size={15} className="text-primary" /></div>
                   <h2 className="section-title">{t("about_me")}</h2>
                 </div>
-                <p className="rounded-2xl border border-border/20 bg-secondary/10 p-4 text-[13px] leading-[1.8] text-muted-foreground">
+                <p className="rounded-2xl border border-border/20 bg-secondary/10 p-4 text-[13px] leading-[1.8] font-medium text-foreground/80">
                   {about}
                 </p>
               </motion.div>
