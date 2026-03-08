@@ -119,20 +119,33 @@ const BusinessCard = () => {
             </div>
 
             <div className="flex flex-col items-center px-8 pb-8">
-              {/* Logo */}
+              {/* Company Logo */}
               <motion.div
-                className="mb-6 flex items-center gap-2"
+                className="mb-8 flex flex-col items-center gap-1"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                <span className="text-sm text-muted-foreground">إتمام</span>
-                <div className="flex items-center text-primary">
-                  <span className="text-xl font-bold tracking-wide">Etmam</span>
-                  <div className="ml-1 flex flex-col gap-[2px]">
-                    <div className="h-[2px] w-4 rounded bg-primary" />
-                    <div className="h-[2px] w-3 rounded bg-primary" />
-                    <div className="h-[2px] w-2 rounded bg-primary" />
+                <div className="relative flex items-center gap-3">
+                  {/* Decorative left line */}
+                  <div className="flex flex-col items-end gap-[3px]">
+                    <div className="h-[1.5px] w-8 rounded-full bg-gradient-to-r from-transparent to-primary/60" />
+                    <div className="h-[1.5px] w-5 rounded-full bg-gradient-to-r from-transparent to-primary/40" />
+                  </div>
+                  
+                  <div className="flex flex-col items-center">
+                    <span className="text-2xl font-bold tracking-widest text-primary" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.15em" }}>
+                      ETMAM
+                    </span>
+                    <span className="mt-0.5 text-[10px] font-medium tracking-[0.3em] text-muted-foreground/70">
+                      إتمام لتقنية المعلومات
+                    </span>
+                  </div>
+
+                  {/* Decorative right line */}
+                  <div className="flex flex-col items-start gap-[3px]">
+                    <div className="h-[1.5px] w-8 rounded-full bg-gradient-to-l from-transparent to-primary/60" />
+                    <div className="h-[1.5px] w-5 rounded-full bg-gradient-to-l from-transparent to-primary/40" />
                   </div>
                 </div>
               </motion.div>
