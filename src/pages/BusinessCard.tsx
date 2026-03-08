@@ -227,8 +227,8 @@ const BusinessCard = () => {
                     <Phone size={17} className="text-primary" />
                   </div>
                   <div className="min-w-0 flex-1 text-start">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
-                    <p className="text-[14px] font-bold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{phoneNum}</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground">{t("call")}</p>
+                    <p className="text-[15px] font-bold text-foreground" dir="ltr" style={{ textAlign: lang === "ar" ? "right" : "left" }}>{phoneNum}</p>
                   </div>
                 </motion.a>
 
