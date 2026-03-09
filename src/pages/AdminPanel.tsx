@@ -294,7 +294,7 @@ const AdminPanel = () => {
                         title={client.is_active ? (lang === "ar" ? "تعطيل" : "Disable") : (lang === "ar" ? "تفعيل" : "Enable")}
                       >
                         {client.is_active
-                          ? <ToggleRight size={16} className="text-green-500" />
+                          ? <ToggleRight size={16} className="text-primary" />
                           : <ToggleLeft size={16} className="text-muted-foreground" />}
                       </button>
                       <button
