@@ -80,21 +80,7 @@ const BusinessCard = ({ overrideData }: { overrideData?: any } = {}) => {
 
   return (
     <div className="relative z-10 flex h-[100dvh] items-center justify-center overflow-hidden px-3">
-      {/* Top controls */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="fixed left-3 right-3 top-2 z-20 flex items-center justify-between"
-      >
-        <Link to="/login" className="icon-btn">
-          <Settings size={18} className="text-foreground/80" />
-        </Link>
-        <button onClick={() => setLang(lang === "en" ? "ar" : "en")} className="icon-btn gap-1.5 !px-3">
-          <Languages size={16} className="text-foreground/80" />
-          <span className="text-xs font-semibold text-foreground/80">{lang === "en" ? "عربي" : "EN"}</span>
-        </button>
-      </motion.div>
+      {/* Top controls removed - integrated into card header */}
 
       {/* Card */}
       <div
@@ -118,7 +104,7 @@ const BusinessCard = ({ overrideData }: { overrideData?: any } = {}) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Top accent header */}
+            {/* Top accent header with controls */}
             <div className="relative h-12 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.08] to-transparent" />
               <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
@@ -127,7 +113,18 @@ const BusinessCard = ({ overrideData }: { overrideData?: any } = {}) => {
                 <div className="h-1 w-1 rounded-full bg-primary/40" />
                 <div className="h-px w-8 bg-gradient-to-l from-transparent to-primary/30" />
               </div>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2">
+              {/* Left: Settings */}
+              <div className="absolute left-3 top-1/2 -translate-y-1/2">
+                <Link to="/login" className="flex h-8 w-8 items-center justify-center rounded-lg border border-border/30 bg-secondary/20 transition-all hover:border-primary/30 hover:bg-primary/10">
+                  <Settings size={14} className="text-foreground/60" />
+                </Link>
+              </div>
+              {/* Right: Language + Flip */}
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                <button onClick={() => setLang(lang === "en" ? "ar" : "en")} className="flex h-8 items-center gap-1 rounded-lg border border-border/30 bg-secondary/20 px-2.5 transition-all hover:border-primary/30 hover:bg-primary/10">
+                  <Languages size={12} className="text-foreground/60" />
+                  <span className="text-[10px] font-semibold text-foreground/60">{lang === "en" ? "عربي" : "EN"}</span>
+                </button>
                 <button onClick={() => setFlipped(true)} className="flex h-8 w-8 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 transition-all hover:bg-primary/20 hover:border-primary/50">
                   <RotateCw size={13} className="text-primary" />
                 </button>
