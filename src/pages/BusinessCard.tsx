@@ -80,21 +80,7 @@ const BusinessCard = ({ overrideData }: { overrideData?: any } = {}) => {
 
   return (
     <div className="relative z-10 flex h-[100dvh] items-center justify-center overflow-hidden px-3">
-      {/* Top controls */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="fixed left-3 right-3 top-2 z-20 flex items-center justify-between"
-      >
-        <Link to="/login" className="icon-btn">
-          <Settings size={18} className="text-foreground/80" />
-        </Link>
-        <button onClick={() => setLang(lang === "en" ? "ar" : "en")} className="icon-btn gap-1.5 !px-3">
-          <Languages size={16} className="text-foreground/80" />
-          <span className="text-xs font-semibold text-foreground/80">{lang === "en" ? "عربي" : "EN"}</span>
-        </button>
-      </motion.div>
+      {/* Top controls removed - integrated into card header */}
 
       {/* Card */}
       <div
