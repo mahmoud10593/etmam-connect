@@ -462,7 +462,7 @@ const BusinessCard = ({ overrideData }: { overrideData?: any } = {}) => {
 
       {/* Footer */}
       <motion.p
-        className="fixed bottom-4 left-0 right-0 text-center text-[9px] font-medium tracking-[0.3em] uppercase text-muted-foreground/20"
+        className="fixed bottom-2 left-0 right-0 text-center text-[8px] font-medium tracking-[0.3em] uppercase text-muted-foreground/20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
