@@ -100,14 +100,15 @@ Deno.serve(async (req) => {
       });
     }
 
-    // Update card_data with the client's name
-    const nameParts = client_name.trim().split(/\s+/);
+    // Update card_data with the client's actual name and email
     await adminClient
       .from("card_data")
       .update({
         name_en: client_name,
         name_ar: client_name,
         email: email,
+        about_en: `Passionate professional with expertise in bridging the gap between business needs and technology solutions.`,
+        about_ar: `محترف شغوف بالتقنية وتحسين العمليات`,
       })
       .eq("user_id", newUser.user.id);
 
