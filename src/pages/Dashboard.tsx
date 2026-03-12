@@ -372,7 +372,7 @@ const Dashboard = () => {
           >
             {activeTab === "basic" && (
               <div className="grid gap-5 md:grid-cols-2">
-                {/* Avatar Upload  test1*/}
+                {/* Avatar Upload  */}
                 <div className="md:col-span-2 flex flex-col items-center gap-3 mb-2">
                   <label className={labelClass}>{lang === "ar" ? "الصورة الشخصية" : "Profile Photo"}</label>
                   <div className="relative group">
